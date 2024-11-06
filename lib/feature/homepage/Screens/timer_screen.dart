@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:projekt_timer_app/feature/mainscreen/widgets/stopwatch_function_button.dart';
+import 'package:projekt_timer_app/feature/homepage/widgets/stopwatch_function_button.dart';
 
-class StopwatchScreen extends StatelessWidget {
-  const StopwatchScreen({
+class TimerScreen extends StatelessWidget {
+  const TimerScreen({
     super.key,
   });
 
@@ -27,9 +27,6 @@ class StopwatchScreen extends StatelessWidget {
             ),
             StopwatchFunctionButton(
               buttonName: 'Stop',
-            ),
-            StopwatchFunctionButton(
-              buttonName: 'Reset',
             ),
           ],
         )
