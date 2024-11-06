@@ -1,5 +1,5 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:projekt_timer_app/feature/homepage/models/functions.dart';
 import 'package:projekt_timer_app/feature/homepage/widgets/stopwatch_function_button.dart';
 
 class StopwatchScreen extends StatefulWidget {
@@ -12,14 +12,46 @@ class StopwatchScreen extends StatefulWidget {
 }
 
 class _StopwatchScreenState extends State<StopwatchScreen> {
+  int seconds = 0;
+  late Timer timer;
+
+  Future<void> startStopwatch() async {
+    timer = Timer.periodic(
+      const Duration(seconds: 1),
+      (timer) {
+        setState(
+          () {
+            seconds++;
+          },
+        );
+      },
+    );
+  }
+
+  Future<void> stopStopwatch() async {
+    Future.delayed(
+      const Duration(milliseconds: 50),
+      () => timer.cancel(),
+    );
+  }
+
+  Future<void> resetStopwatch() async {
+    await Future.delayed(const Duration(seconds: 2));
+    return setState(
+      () {
+        seconds = 0;
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          "15 s",
-          style: TextStyle(
+          "$seconds ´s",
+          style: const TextStyle(
             fontWeight: FontWeight.w600,
             fontSize: 96,
             color: Color.fromARGB(255, 14, 65, 107),
