@@ -22,10 +22,10 @@ class _StopwatchScreenState extends State<StopwatchScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text(
+        const Text(
           "15 s",
           style: TextStyle(
             fontWeight: FontWeight.w600,
@@ -36,13 +36,14 @@ class _StopwatchScreenState extends State<StopwatchScreen> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            StopwatchFunctionButton(
+            const StopwatchFunctionButton(
               buttonName: 'Start',
             ),
-            StopwatchFunctionButton(
+            const StopwatchFunctionButton(
               buttonName: 'Stop',
             ),
             StopwatchFunctionButton(
+              onTap: resetStopwatch,
               buttonName: 'Reset',
             ),
           ],
