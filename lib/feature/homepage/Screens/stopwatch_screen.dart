@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:projekt_timer_app/feature/homepage/widgets/stopwatch_function_button.dart';
 
-class StopwatchScreen extends StatelessWidget {
+class StopwatchScreen extends StatefulWidget {
   const StopwatchScreen({
     super.key,
   });
 
+  @override
+  State<StopwatchScreen> createState() => _StopwatchScreenState();
+}
+
+class _StopwatchScreenState extends State<StopwatchScreen> {
   @override
   Widget build(BuildContext context) {
     return const Column(
