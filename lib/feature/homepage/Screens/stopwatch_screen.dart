@@ -15,16 +15,32 @@ class _StopwatchScreenState extends State<StopwatchScreen> {
   int seconds = 0;
   late Timer timer;
 
+  // Future<void> startStopwatch() async {
+  //   timer = Timer.periodic(
+  //     const Duration(seconds: 1),
+  //     (timer) {
+  //       setState(
+  //         () {
+  //           seconds++;
+  //         },
+  //       );
+  //     },
+  //   );
+  // }
+
   Future<void> startStopwatch() async {
-    timer = Timer.periodic(
+    Future.delayed(
       const Duration(seconds: 1),
-      (timer) {
-        setState(
-          () {
-            seconds++;
-          },
-        );
-      },
+      () => timer = Timer.periodic(
+        const Duration(seconds: 1),
+        (timer) {
+          setState(
+            () {
+              seconds++;
+            },
+          );
+        },
+      ),
     );
   }
 
