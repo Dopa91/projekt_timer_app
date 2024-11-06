@@ -13,29 +13,39 @@ class TimerScreen extends StatefulWidget {
 class _TimerScreenState extends State<TimerScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(
-          "15 s",
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 14, 65, 107),
+        title: const Text(
+          "Timer",
           style: TextStyle(
-            fontWeight: FontWeight.w600,
-            fontSize: 96,
-            color: Color.fromARGB(255, 14, 65, 107),
-          ),
+              fontSize: 30, color: Colors.white, fontWeight: FontWeight.w600),
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            StopwatchFunctionButton(
-              buttonName: 'Start',
+      ),
+      body: const Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            "15 s",
+            style: TextStyle(
+              fontWeight: FontWeight.w600,
+              fontSize: 96,
+              color: Color.fromARGB(255, 14, 65, 107),
             ),
-            StopwatchFunctionButton(
-              buttonName: 'Stop',
-            ),
-          ],
-        )
-      ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              StopwatchFunctionButton(
+                buttonName: 'Start',
+              ),
+              StopwatchFunctionButton(
+                buttonName: 'Stop',
+              ),
+            ],
+          )
+        ],
+      ),
     );
   }
 }

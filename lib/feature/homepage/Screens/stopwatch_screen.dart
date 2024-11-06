@@ -46,35 +46,45 @@ class _StopwatchScreenState extends State<StopwatchScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(
-          "$seconds ´s",
-          style: const TextStyle(
-            fontWeight: FontWeight.w600,
-            fontSize: 96,
-            color: Color.fromARGB(255, 14, 65, 107),
-          ),
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 14, 65, 107),
+        title: const Text(
+          "Stopwatch",
+          style: TextStyle(
+              fontSize: 30, color: Colors.white, fontWeight: FontWeight.w600),
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            StopwatchFunctionButton(
-              onTap: startStopwatch,
-              buttonName: 'Start',
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            "$seconds ´s",
+            style: const TextStyle(
+              fontWeight: FontWeight.w600,
+              fontSize: 96,
+              color: Color.fromARGB(255, 14, 65, 107),
             ),
-            StopwatchFunctionButton(
-              onTap: stopStopwatch,
-              buttonName: 'Stop',
-            ),
-            StopwatchFunctionButton(
-              onTap: resetStopwatch,
-              buttonName: 'Reset',
-            ),
-          ],
-        )
-      ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              StopwatchFunctionButton(
+                onTap: startStopwatch,
+                buttonName: 'Start',
+              ),
+              StopwatchFunctionButton(
+                onTap: stopStopwatch,
+                buttonName: 'Stop',
+              ),
+              StopwatchFunctionButton(
+                onTap: resetStopwatch,
+                buttonName: 'Reset',
+              ),
+            ],
+          )
+        ],
+      ),
     );
   }
 }

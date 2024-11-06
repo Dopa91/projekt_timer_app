@@ -10,18 +10,8 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: const Color.fromARGB(255, 14, 65, 107),
-          title: const Text(
-            "Stopwatch",
-            style: TextStyle(
-                fontSize: 30, color: Colors.white, fontWeight: FontWeight.w600),
-          ),
-        ),
-        body: const BottomNavigationBarScreen(),
-      ),
+    return const MaterialApp(
+      home: BottomNavigationBarScreen(),
     );
   }
 }
