@@ -36,10 +36,12 @@ class _StopwatchScreenState extends State<StopwatchScreen> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            const StopwatchFunctionButton(
+            StopwatchFunctionButton(
+              onTap: startStopwatch,
               buttonName: 'Start',
             ),
-            const StopwatchFunctionButton(
+            StopwatchFunctionButton(
+              onTap: stopStopwatch,
               buttonName: 'Stop',
             ),
             StopwatchFunctionButton(
