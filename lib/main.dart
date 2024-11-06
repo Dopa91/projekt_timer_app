@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projekt_timer_app/bottom_navigation_bar_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -9,11 +10,17 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
+        appBar: AppBar(
+          backgroundColor: const Color.fromARGB(255, 14, 65, 107),
+          title: const Text(
+            "Stopwatch",
+            style: TextStyle(
+                fontSize: 30, color: Colors.white, fontWeight: FontWeight.w600),
+          ),
         ),
+        body: const BottomNavigationBarScreen(),
       ),
     );
   }
