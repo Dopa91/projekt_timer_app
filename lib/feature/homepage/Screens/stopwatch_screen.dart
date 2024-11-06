@@ -51,6 +51,11 @@ class _StopwatchScreenState extends State<StopwatchScreen> {
     );
   }
 
+  // ohne delayed
+  // void stopStopwatch() {
+  //   () => timer.cancel();
+  // }
+
   Future<void> resetStopwatch() async {
     await Future.delayed(const Duration(seconds: 2));
     return setState(
