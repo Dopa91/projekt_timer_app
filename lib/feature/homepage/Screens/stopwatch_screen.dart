@@ -11,6 +11,15 @@ class StopwatchScreen extends StatefulWidget {
 }
 
 class _StopwatchScreenState extends State<StopwatchScreen> {
+  Future<void> startStopwatch() async {}
+
+  void stopStopwatch() {}
+
+  void resetStopwatch() {
+    stopStopwatch();
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return const Column(
