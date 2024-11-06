@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:projekt_timer_app/stopwatch_screen.dart';
-import 'package:projekt_timer_app/timer_screen.dart';
+import 'package:projekt_timer_app/feature/mainscreen/Screens/stopwatch_screen.dart';
+import 'package:projekt_timer_app/feature/mainscreen/Screens/timer_screen.dart';
 
 class BottomNavigationBarScreen extends StatefulWidget {
   const BottomNavigationBarScreen({

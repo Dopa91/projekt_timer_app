@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:projekt_timer_app/bottom_navigation_bar_screen.dart';
+import 'package:projekt_timer_app/feature/bottom_nav_bar/bottom_navigation_bar_screen.dart';
 
 void main() {
   runApp(const MainApp());

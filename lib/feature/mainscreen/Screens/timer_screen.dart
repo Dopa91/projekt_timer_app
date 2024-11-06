@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:projekt_timer_app/stopwatch_function_button.dart';
+import 'package:projekt_timer_app/feature/mainscreen/widgets/stopwatch_function_button.dart';
 
 class TimerScreen extends StatelessWidget {
   const TimerScreen({
