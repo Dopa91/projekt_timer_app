@@ -23,9 +23,11 @@ class _StopwatchScreenState extends State<StopwatchScreen> {
       await Future.delayed(
         const Duration(seconds: 1),
       );
-      setState(() {
-        seconds++;
-      });
+      setState(
+        () {
+          seconds++;
+        },
+      );
     }
   }
 
@@ -73,7 +75,6 @@ class _StopwatchScreenState extends State<StopwatchScreen> {
       isActive = false;
     });
   }
-
   // ohne delayed
   // void stopStopwatch() {
   //   () => timer.cancel();
