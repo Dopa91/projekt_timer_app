@@ -66,7 +66,8 @@ class _StopwatchScreenState extends State<StopwatchScreen> {
     );
   }
 
-  void stopStopwatchNew() {
+  Future<void> stopStopwatchNew() async {
+    await Future.delayed(const Duration(seconds: 1));
     setState(() {
       isActive = false;
     });
