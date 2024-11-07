@@ -22,10 +22,10 @@ class _TimerScreenState extends State<TimerScreen> {
               fontSize: 30, color: Colors.white, fontWeight: FontWeight.w600),
         ),
       ),
-      body: const Column(
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
+          const Text(
             "15 s",
             style: TextStyle(
               fontWeight: FontWeight.w600,
@@ -33,7 +33,19 @@ class _TimerScreenState extends State<TimerScreen> {
               color: Color.fromARGB(255, 14, 65, 107),
             ),
           ),
-          Row(
+          Padding(
+            padding: const EdgeInsets.only(left: 156, right: 156, bottom: 24),
+            child: TextFormField(
+              decoration: const InputDecoration(
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color.fromARGB(255, 14, 65, 107),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               StopwatchFunctionButton(
