@@ -21,7 +21,7 @@ class _StopwatchScreenState extends State<StopwatchScreen> {
   void startStopwatchNew() async {
     while (isActive) {
       await Future.delayed(
-        const Duration(microseconds: 50),
+        const Duration(seconds: 1),
       );
       setState(() {
         seconds++;
@@ -42,7 +42,7 @@ class _StopwatchScreenState extends State<StopwatchScreen> {
   //     },
   //   );
   // }
-
+// TimerWidget
   void startStopwatch() {
     Future.delayed(
       const Duration(seconds: 1),
@@ -59,6 +59,7 @@ class _StopwatchScreenState extends State<StopwatchScreen> {
     );
   }
 
+// TimerWidget
   Future<void> stopStopwatch() async {
     Future.delayed(
       const Duration(milliseconds: 50),
