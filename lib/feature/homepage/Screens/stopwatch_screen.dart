@@ -15,7 +15,8 @@ class _StopwatchScreenState extends State<StopwatchScreen> {
   int seconds = 0;
   late Timer timer;
 
-  // Future<void> startStopwatch() async {
+  // ohne delayed
+  // void startStopwatch() {
   //   timer = Timer.periodic(
   //     const Duration(seconds: 1),
   //     (timer) {
@@ -28,7 +29,7 @@ class _StopwatchScreenState extends State<StopwatchScreen> {
   //   );
   // }
 
-  Future<void> startStopwatch() async {
+  void startStopwatch() {
     Future.delayed(
       const Duration(seconds: 1),
       () => timer = Timer.periodic(
@@ -56,6 +57,7 @@ class _StopwatchScreenState extends State<StopwatchScreen> {
   //   () => timer.cancel();
   // }
 
+  // ohne delayed
   // void resetStopwatch() {
   //   return setState(
   //     () {
