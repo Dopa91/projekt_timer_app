@@ -15,6 +15,20 @@ class _StopwatchScreenState extends State<StopwatchScreen> {
   int seconds = 0;
   late Timer timer;
 
+  bool isActive = true;
+
+// Alternative zu TimerWidget
+  void startStopwatchNew() async {
+    while (isActive) {
+      await Future.delayed(
+        const Duration(microseconds: 50),
+      );
+      setState(() {
+        seconds++;
+      });
+    }
+  }
+
   // ohne delayed
   // void startStopwatch() {
   //   timer = Timer.periodic(
@@ -50,6 +64,12 @@ class _StopwatchScreenState extends State<StopwatchScreen> {
       const Duration(milliseconds: 50),
       () => timer.cancel(),
     );
+  }
+
+  void stopStopwatchNew() {
+    setState(() {
+      isActive = false;
+    });
   }
 
   // ohne delayed
@@ -101,11 +121,11 @@ class _StopwatchScreenState extends State<StopwatchScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               StopwatchFunctionButton(
-                onTap: startStopwatch,
+                onTap: startStopwatchNew,
                 buttonName: 'Start',
               ),
               StopwatchFunctionButton(
-                onTap: stopStopwatch,
+                onTap: stopStopwatchNew,
                 buttonName: 'Stop',
               ),
               StopwatchFunctionButton(
