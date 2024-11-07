@@ -17,6 +17,20 @@ class _StopwatchScreenState extends State<StopwatchScreen> {
 
   bool isActive = true;
 
+//   void countUp() async {
+//     for (int i = 0;; i++) {
+//       await Future.delayed(
+//         const Duration(seconds: 1),
+//       );
+//       setState(
+//         () {
+//           seconds++;
+//         },
+//       );
+//     }
+//   }
+// }
+
 // Alternative zu TimerWidget
   void startStopwatchNew() async {
     while (isActive) {
